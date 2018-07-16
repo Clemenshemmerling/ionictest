@@ -6,7 +6,7 @@ export class LugaresService {
   constructor(public afDB:AngularFireDatabase) {
   }
 
-  place: any = [];
+  Place: any = [];
 
   public getLugares() {
     return this.afDB.list('/lugares/');
@@ -17,14 +17,14 @@ export class LugaresService {
   }
 
   public createLugar(lugar) {
-    return this.afDB.database.ref('/lugares/' + lugar.id).set(place);
+    return this.afDB.database.ref('/lugares/' + lugar.id).set(this.Place);
   }
 
   public editLugar(lugar) {
-    return this.afDB.database.ref('/lugares/' + lugar.id).set(place);
+    return this.afDB.database.ref('/lugares/' + lugar.id).set(this.Place);
   }
 
   public delLugar(lugar) {
-    return this.afDB.database.ref('/lugares/' + lugar.id).remove(place);
+    return this.afDB.database.ref('/lugares/' + lugar.id).remove(this.Place);
   }
 }
