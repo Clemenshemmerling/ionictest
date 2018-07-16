@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { TerceraPage } from '../tercera/tercera';
 
 /**
  * Generated class for the LugarPage page.
@@ -26,5 +27,9 @@ export class LugarPage {
 
   navBack() {
     this.navCtrl.pop();
+  }
+
+  navThird() {
+    this.navCtrl.push(TerceraPage);
   }
 }

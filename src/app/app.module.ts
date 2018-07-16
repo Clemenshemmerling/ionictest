@@ -12,6 +12,19 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
 import { TerceraPage } from '../pages/tercera/tercera';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDThOlQIUddoVMrnz1r1eXnqZeWC4VrSmc",
+  authDomain: "ionic-test-ac020.firebaseapp.com",
+  databaseURL: "https://ionic-test-ac020.firebaseio.com",
+  projectId: "ionic-test-ac020",
+  storageBucket: "ionic-test-ac020.appspot.com",
+  messagingSenderId: "297874458877"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +37,10 @@ import { TerceraPage } from '../pages/tercera/tercera';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
