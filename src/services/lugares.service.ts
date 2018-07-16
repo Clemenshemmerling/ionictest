@@ -6,7 +6,7 @@ export class LugaresService {
   constructor(public afDB:AngularFireDatabase) {
   }
 
-  place = [];
+  place: any = [];
 
   public getLugares() {
     return this.afDB.list('/lugares/');

@@ -7,6 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="navLugar('Primer Lugar')">Navegar a primer lugar</button>
-  <button ion-button color="secondary" (click)="navLugar('Segundo Lugar')">Navegar a segundo lugar</button>
+  <ion-list>
+    <ion-item *ngFor="let lugar of Lugares">
+      <h2>{{lugar.nombre}}</h2>
+      <h3>{{lugar.direccion}}</h3>
+      <p>{{lugar.categoria}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right >
+  <button ion-fab (click)="vistaDetalle()"><ion-icon name="add"></ion-icon></button>
+</ion-fab>
 </ion-content>
