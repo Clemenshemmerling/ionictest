@@ -23,6 +23,6 @@ export class LugaresService {
   }
 
   public delLugar(lugar) {
-    return this.afDB.database.ref('/lugares/' + lugar.id).remove(lugar);
+    return this.afDB.database.ref('/lugares/' + lugar.id).remove();
   }
 }
