@@ -38,7 +38,11 @@ export class HomePage {
   }
 
   vistaDetalle() {
-    alert('Funciona');
+    this.navCtrl.push(LugarPage, {lugar: {} });
+  }
+
+  irDetalle(lugar) {
+    this.navCtrl.push(LugarPage, {lugar: lugar});
   }
 
 }

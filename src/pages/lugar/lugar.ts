@@ -16,20 +16,8 @@ import { TerceraPage } from '../tercera/tercera';
   templateUrl: 'lugar.html',
 })
 export class LugarPage {
-  nombreLugar: string = '';
+  lugar: string = '';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.nombreLugar = navParams.get('nombre');
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LugarPage');
-  }
-
-  navBack() {
-    this.navCtrl.pop();
-  }
-
-  navThird() {
-    this.navCtrl.push(TerceraPage);
+    this.lugar = navParams.get('lugar');
   }
 }
