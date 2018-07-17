@@ -29,7 +29,11 @@ export class HomePage {
   }
 
   borrarlugar(lugar) {
-    return this.lugaresService.delLugar(lugar);
+    if(confirm('Seguro que desea eliminar?')) {
+      return this.lugaresService.delLugar(lugar).then(()=> {
+        alert('Se elimino correctamente');
+      });
+    }
   }
 
 }
