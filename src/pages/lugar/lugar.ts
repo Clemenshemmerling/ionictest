@@ -23,8 +23,11 @@ export class LugarPage {
     this.lugar = navParams.get('lugar');
   }
   guardarLugar() {
-    this.lugar.id = Date.now();
+    if(!this.lugar.id) {
+      this.lugar.id = Date.now();
+    }
     this.lugaresService.createLugar(this.lugar);
-    console.log(this.lugar)
+    alert('Lugar guardado con éxito')
+    this.navCtrl.pop();
   }
 }

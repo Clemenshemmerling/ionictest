@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Lista de lugares
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let lugar of Lugares" (click)="irDetalle()">
+    <ion-item *ngFor="let lugar of Lugares" (click)="irDetalle(lugar)">
       <h2>{{lugar.nombre}}</h2>
       <h3>{{lugar.direccion}}</h3>
       <p>{{lugar.categoria}}</p>
