@@ -16,6 +16,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LugaresService } from '../services/lugares.service';
+import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../services/auth.service';
 
 
 export const firebaseConfig = {
@@ -35,7 +37,8 @@ export const firebaseConfig = {
     PerfilPage,
     TabsPage,
     AboutPage,
-    TerceraPage
+    TerceraPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -52,13 +55,15 @@ export const firebaseConfig = {
     PerfilPage,
     TabsPage,
     AboutPage,
-    TerceraPage
+    TerceraPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LugaresService
+    LugaresService,
+    AuthService
   ]
 })
 export class AppModule {}

@@ -27,7 +27,7 @@ export class LugarPage {
       this.lugar.id = Date.now();
     }
     this.lugaresService.createLugar(this.lugar);
-    alert('Lugar guardado con éxito')
+    alert('Lugar guardado con éxito');
     this.navCtrl.pop();
   }
 }
