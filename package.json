@@ -38,7 +38,9 @@
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "cordova-ios": "~4.5.4",
+    "cordova-android": "~7.0.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
@@ -54,7 +56,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

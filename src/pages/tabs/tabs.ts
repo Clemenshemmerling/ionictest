@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { PerfilPage } from '../perfil/perfil';
-import { LugarPage } from '../lugar/lugar';
 import { AboutPage } from '../about/about';
 import { LoginPage } from '../login/login';
 

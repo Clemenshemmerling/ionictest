@@ -13,7 +13,7 @@ import { AboutPage } from '../pages/about/about';
 import { TerceraPage } from '../pages/tercera/tercera';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LugaresService } from '../services/lugares.service';
 import { LoginPage } from '../pages/login/login';
